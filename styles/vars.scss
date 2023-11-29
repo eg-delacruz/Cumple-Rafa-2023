@@ -1,0 +1,49 @@
+//Fonts
+@font-face {
+  font-family: 'HP';
+  src: url('/HP.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//Comes from public folder
+$font1: 'HP', sans-serif;
+//Comes from font.tsx
+$font2: var(--rubik), sans-serif;
+
+//Colors
+
+//Check if this black suits the design
+//$color--black: #000000;
+$color--black: #0e1211;
+$color--white: #ffffff;
+
+$color--gryffindor-red: #740001;
+$color--gryffindor-gold: #d3a625;
+
+$color--slytherin-green: #1a472a;
+$color--slytherin-silver: #5d5d5d;
+
+$color--hufflepuf-yellow: #ffd800;
+$color--hufflepuf-black: #000000;
+
+$color--ravenclaw-blue: #0e1a40;
+$color--ravenclaw-bronze: #946b2d;
+
+/////////////////////////
+//       Functions     //
+/////////////////////////
+
+@function pixelToRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+/////////////////////////
+//        Mixins       //
+/////////////////////////
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: pixelToRem($size);
+}

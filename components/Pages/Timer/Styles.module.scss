@@ -1,0 +1,31 @@
+.timer {
+  border: 1px solid white;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 40px;
+  padding: 40px;
+  padding-top: 30px;
+  text-align: center;
+  align-items: center;
+  max-width: 400px;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 auto;
+}
+
+.timer p:first-child,
+.timer span:last-child {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .timer {
+    padding: 10px 8px;
+    &__container div:last-child {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}
