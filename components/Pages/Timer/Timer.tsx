@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 
 // Styles
 import styles from './Styles.module.scss';
 
-//Components
-import Layout from '@components/Layout/Layout';
+//Assets
+import fantasmitas from '@assets/gifs/fantasmitas.gif';
 
 //Types
 type Props = {
@@ -12,6 +13,8 @@ type Props = {
 };
 
 const Timer = ({ date }: Props) => {
+  const alreadyPassed = new Date(date).getTime() - new Date().getTime() < 0;
+
   const [timerDays, setTimerDays] = useState('00');
   const [timerHours, setTimerHours] = useState('00');
   const [timerMinutes, setTimerMinutes] = useState('00');
@@ -26,8 +29,8 @@ const Timer = ({ date }: Props) => {
       // This is given in milliseconds
       const distance = CountdownDate - now;
 
-      if (distance <= 0) {
-        // Timer has finished, show 10 seconds countdown
+      //Set the counter starting from 10 seconds if the date has already passed
+      if (alreadyPassed) {
         clearInterval(interval.current);
         setTimerDays('00');
         setTimerHours('00');
@@ -39,14 +42,20 @@ const Timer = ({ date }: Props) => {
           setTimerSeconds((prevSeconds) => {
             const seconds = parseInt(prevSeconds);
             if (seconds > 0) {
+              // If seconds is greater than 0, return the seconds - 1
               return (seconds - 1).toString().padStart(2, '0');
             } else {
+              console.log('Finished after the date has passed');
+              //Set the next page here
               clearInterval(countdownInterval);
               return '00';
             }
           });
         }, 1000);
-      } else {
+      }
+
+      // If the date has not passed yet, set the timer
+      if (!alreadyPassed) {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor(
           (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -58,6 +67,17 @@ const Timer = ({ date }: Props) => {
         setTimerHours(hours.toString().padStart(2, '0'));
         setTimerMinutes(minutes.toString().padStart(2, '0'));
         setTimerSeconds(seconds.toString().padStart(2, '0'));
+
+        // If distance is less than 0, clear the interval and set the timer to 00
+        if (distance < 0) {
+          console.log('Finished exactly when the date has passed');
+          //Set the next page here
+          clearInterval(interval.current);
+          setTimerDays('00');
+          setTimerHours('00');
+          setTimerMinutes('00');
+          setTimerSeconds('00');
+        }
       }
     }, 1000);
   };
@@ -70,46 +90,50 @@ const Timer = ({ date }: Props) => {
   }, []);
 
   return (
-    <Layout>
-      <div>
-        <h1>Harry Potter</h1>
-        <h2>Harry Potter</h2>
-        <h3>Harry Potter</h3>
-        <h4>Harry Potter</h4>
-        <h5>Harry Potter</h5>
-        <h6>Harry Potter</h6>
+    <div className={styles.container}>
+      <h1 className={styles.title}>El gran día se acerca</h1>
 
-        <div className={styles.timer}>
-          <section>
-            <p>{timerDays}</p>
-            <p>
-              <small>Días</small>
-            </p>
-          </section>
-          <span>:</span>
-          <section>
-            <p>{timerHours}</p>
-            <p>
-              <small>Horas</small>
-            </p>
-          </section>
-          <span>:</span>
-          <section>
-            <p>{timerMinutes}</p>
-            <p>
-              <small>Minutos</small>
-            </p>
-          </section>
-          <span>:</span>
-          <section>
-            <p>{timerSeconds}</p>
-            <p>
-              <small>Segundos</small>
-            </p>
-          </section>
-        </div>
+      <Image
+        className={styles.fantasmitas}
+        src={fantasmitas}
+        alt='Fantasmitas'
+        width={300}
+      />
+
+      <p className={styles.quote}>
+        La paciencia es amarga, pero sus frutos son dulces...
+      </p>
+
+      <div className={styles.timer}>
+        <section>
+          <p>{timerDays}</p>
+          <p>
+            <small>Días</small>
+          </p>
+        </section>
+        <span>:</span>
+        <section>
+          <p>{timerHours}</p>
+          <p>
+            <small>Horas</small>
+          </p>
+        </section>
+        <span>:</span>
+        <section>
+          <p>{timerMinutes}</p>
+          <p>
+            <small>Minutos</small>
+          </p>
+        </section>
+        <span>:</span>
+        <section>
+          <p>{timerSeconds}</p>
+          <p>
+            <small>Segundos</small>
+          </p>
+        </section>
       </div>
-    </Layout>
+    </div>
   );
 };
 
