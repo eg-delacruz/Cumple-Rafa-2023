@@ -10,9 +10,10 @@ import fantasmitas from '@assets/gifs/fantasmitas.gif';
 //Types
 type Props = {
   date: string;
+  setPage: (page: number) => void;
 };
 
-const Timer = ({ date }: Props) => {
+const Timer = ({ date, setPage }: Props) => {
   const alreadyPassed = new Date(date).getTime() - new Date().getTime() < 0;
 
   const [timerDays, setTimerDays] = useState('00');
@@ -45,8 +46,8 @@ const Timer = ({ date }: Props) => {
               // If seconds is greater than 0, return the seconds - 1
               return (seconds - 1).toString().padStart(2, '0');
             } else {
-              console.log('Finished after the date has passed');
               //Set the next page here
+              setPage(1);
               clearInterval(countdownInterval);
               return '00';
             }
@@ -70,8 +71,8 @@ const Timer = ({ date }: Props) => {
 
         // If distance is less than 0, clear the interval and set the timer to 00
         if (distance < 0) {
-          console.log('Finished exactly when the date has passed');
           //Set the next page here
+          setPage(1);
           clearInterval(interval.current);
           setTimerDays('00');
           setTimerHours('00');
