@@ -1,0 +1,53 @@
+@import '../../../styles/vars.scss';
+@import '../../../styles/animation.scss';
+
+.container {
+  background-color: $color--hufflepuf-primary;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $color--hufflepuf-secondary;
+  color: $color--black;
+  text-align: center;
+  padding-top: 32px;
+}
+
+.drums {
+  margin-top: 24px;
+  opacity: 0;
+  animation: setFadeIn(1s, 2s);
+}
+
+.drums p {
+  @include font-size(24px);
+}
+
+.kiss {
+  margin-top: 24px;
+  opacity: 0;
+  animation: setFadeIn(1s, 5s);
+}
+.kiss p {
+  @include font-size(32px);
+}
+
+.punch_line {
+  margin-top: 24px;
+}
+
+.punch_line p {
+  @include font-size(32px);
+  max-width: 300px;
+}
+
+.punch_line p:first-child {
+  opacity: 0;
+  animation: setFadeIn(1s, 8s);
+}
+
+.punch_line p:last-child {
+  opacity: 0;
+  animation: setFadeIn(1s, 11s);
+  @include font-size(100px);
+}

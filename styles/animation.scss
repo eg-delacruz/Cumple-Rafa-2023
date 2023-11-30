@@ -1,0 +1,13 @@
+@function setFadeIn($duration: 1s, $delay: 0s) {
+  @return (fadeIn $duration ease-in-out $delay forwards);
+}
+@keyframes fadeIn {
+  from {
+    filter: blur(5px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}

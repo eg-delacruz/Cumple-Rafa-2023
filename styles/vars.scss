@@ -9,7 +9,7 @@
 //Comes from public folder
 $font1: 'HP', sans-serif;
 //Comes from font.tsx
-$font2: var(--rubik), sans-serif;
+$font2: var(--yeseva-one), sans-serif;
 
 //Colors
 
@@ -18,17 +18,17 @@ $font2: var(--rubik), sans-serif;
 $color--black: #0e1211;
 $color--white: #ffffff;
 
-$color--gryffindor-red: #740001;
-$color--gryffindor-gold: #d3a625;
+$color--gryffindor-primary: #740001;
+$color--gryffindor-secondary: #d3a625;
 
-$color--slytherin-green: #1a472a;
-$color--slytherin-silver: #5d5d5d;
+$color--slytherin-primary: #1a472a;
+$color--slytherin-secondary: #5d5d5d;
 
-$color--hufflepuf-yellow: #ffd800;
-$color--hufflepuf-black: #000000;
+$color--hufflepuf-primary: #ffd800;
+$color--hufflepuf-secondary: #000000;
 
-$color--ravenclaw-blue: #0e1a40;
-$color--ravenclaw-bronze: #946b2d;
+$color--ravenclaw-primary: #0e1a40;
+$color--ravenclaw-secondary: #946b2d;
 
 /////////////////////////
 //       Functions     //

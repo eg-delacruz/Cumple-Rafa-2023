@@ -4,16 +4,18 @@
   min-height: 100vh;
 }
 .gryffindor {
-  background-color: $color--gryffindor-red;
+  background-color: $color--gryffindor-primary;
 }
 .slytherin {
-  background-color: $color--slytherin-green;
+  background-color: $color--slytherin-primary;
 }
 .hufflepuff {
-  background-color: $color--hufflepuf-yellow;
+  background-color: $color--hufflepuf-primary;
+  //TODO: Decide if letting this color for the font or just the normal black
+  color: $color--hufflepuf-secondary;
 }
 .ravenclaw {
-  background-color: $color--ravenclaw-blue;
+  background-color: $color--ravenclaw-primary;
 }
 
 .header {

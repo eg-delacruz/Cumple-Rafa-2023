@@ -13,6 +13,7 @@ body {
   font-family: $font2;
   scroll-behavior: smooth;
   color: $color--white;
+  @include font-size(20px);
 }
 
 body {

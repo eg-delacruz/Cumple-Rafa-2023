@@ -1,7 +1,7 @@
-import { Rubik } from 'next/font/google';
+import { Yeseva_One } from 'next/font/google';
 
-export const rubik = Rubik({
-  weight: ['400', '700'],
+export const yeseva = Yeseva_One({
+  weight: ['400'],
   subsets: ['latin'],
-  variable: '--rubik',
+  variable: '--yeseva-one',
 });

@@ -99,6 +99,7 @@ const Timer = ({ date, setPage }: Props) => {
         src={fantasmitas}
         alt='Fantasmitas'
         width={300}
+        priority
       />
 
       <p className={styles.quote}>

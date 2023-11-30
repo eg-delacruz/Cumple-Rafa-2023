@@ -6,6 +6,7 @@ import useLocalStorage from '@hooks/useLocalStorage';
 //Components
 import Timer from '@components/Pages/Timer/Timer';
 import Joke from '@components/Pages/Joke/Joke';
+import Welcome from '@components/Pages/Welcome/Welcome';
 
 export default function Home() {
   //TODO: to avoit having to clear the local storage, use a state while depeloping the app, and then change it to use the local storage
@@ -27,8 +28,14 @@ export default function Home() {
       </Head>
 
       <main>
-        {/* <Timer date='December 27 2023 10:30:00' setPage={setPage} /> */}
-        <Timer date='November 30 2023 10:22:00' setPage={setPage} />
+        {/* {page === 0 && (
+          <Timer date='December 27 2023 10:30:00' setPage={setPage} />
+        )} */}
+        {page === 0 && (
+          <Timer date='November 30 2023 11:34:00' setPage={setPage} />
+        )}
+        {page === 1 && <Joke setPage={setPage} />}
+        {page === 2 && <Welcome setPage={setPage} />}
       </main>
     </>
   );
