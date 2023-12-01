@@ -1,0 +1,12 @@
+@import '../../styles/vars.scss';
+
+.container {
+  text-align: center;
+}
+.align_left {
+  text-align: left;
+}
+.title {
+  @include font-size(64px);
+  font-family: $font2;
+}

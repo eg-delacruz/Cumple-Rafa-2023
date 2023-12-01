@@ -1,3 +1,5 @@
+//To make elements appear, give them an opacity of 0 and add this to the animation: setFadeIn(1s, 7s);
+
 @function setFadeIn($duration: 1s, $delay: 0s) {
   @return (fadeIn $duration ease-in-out $delay forwards);
 }

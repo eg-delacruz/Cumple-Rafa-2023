@@ -1,0 +1,18 @@
+@import '../../styles/vars.scss';
+
+.form {
+  max-width: 300px;
+  margin: 0 auto;
+
+  input {
+    font-family: $font2;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  button {
+    font-family: $font2;
+    @include font-size(14px);
+  }
+}

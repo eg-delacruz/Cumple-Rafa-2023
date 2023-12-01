@@ -1,0 +1,24 @@
+@import '../../../styles/vars.scss';
+@import '../../../styles/animation.scss';
+
+.title {
+  @include font-size(64px);
+  font-family: $font2;
+  text-align: center;
+}
+.dot {
+  text-align: center;
+  @include font-size(56px);
+  line-height: 25px;
+  margin-top: -12px;
+  opacity: 0;
+  animation: setFadeIn(1s, 10s);
+}
+.appear1 {
+  opacity: 0;
+  animation: setFadeIn(1s, 12s);
+}
+.appear2 {
+  opacity: 0;
+  animation: setFadeIn(1s, 16s);
+}

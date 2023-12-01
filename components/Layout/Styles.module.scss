@@ -11,11 +11,14 @@
 }
 .hufflepuff {
   background-color: $color--hufflepuf-primary;
-  //TODO: Decide if letting this color for the font or just the normal black
   color: $color--hufflepuf-secondary;
 }
 .ravenclaw {
   background-color: $color--ravenclaw-primary;
+}
+
+.ravenclaw header {
+  box-shadow: 0px 0px 10px 0px $color--white;
 }
 
 .header {
@@ -32,6 +35,10 @@
   h3 {
     @include font-size(42px);
   }
+}
+
+.main {
+  max-width: 700px;
 }
 
 //Media queries

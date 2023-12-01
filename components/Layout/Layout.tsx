@@ -15,7 +15,8 @@ type Props = {
 const Layout = ({ theme = 'gryffindor', children }: Props) => {
   return (
     <div
-      className={`${styles.pagebg} ${
+      className={`${styles.pagebg} 
+      ${
         theme === 'gryffindor'
           ? styles.gryffindor
           : theme === 'slytherin'
@@ -24,7 +25,7 @@ const Layout = ({ theme = 'gryffindor', children }: Props) => {
           ? styles.hufflepuff
           : styles.ravenclaw
       }
-    }`}
+    `}
     >
       <header className={styles.header}>
         <div className={`${styles.header__container} container`}>
@@ -32,7 +33,7 @@ const Layout = ({ theme = 'gryffindor', children }: Props) => {
           <Image src={sapo} alt='sapo' width={100} height={100} />
         </div>
       </header>
-      <div className='container'>{children}</div>
+      <main className={`${styles.main} container`}>{children}</main>
     </div>
   );
 };

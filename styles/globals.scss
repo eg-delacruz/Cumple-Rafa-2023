@@ -7,7 +7,6 @@
   margin: 0;
 }
 
-//TODO: poner color default blanco
 html,
 body {
   font-family: $font2;
@@ -63,4 +62,53 @@ a {
   margin: 0 auto;
   box-sizing: border-box;
   padding: 32px 8px;
+}
+
+.btn {
+  display: block;
+  @include font-size(16px);
+  margin: 0 auto;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn__gryffindor {
+  background-color: $color--gryffindor-secondary;
+  color: $color--white;
+  box-shadow: 0px 0px 10px 0px $color--white;
+}
+
+.btn__slytherin {
+  background-color: $color--slytherin-secondary;
+  color: $color--white;
+  box-shadow: 0px 0px 10px 0px $color--white;
+}
+
+.btn__hufflepuff {
+  background-color: $color--hufflepuf-secondary;
+  color: $color--white;
+  box-shadow: 0px 0px 10px 0px $color--white;
+}
+
+.btn__ravenclaw {
+  background-color: $color--ravenclaw-secondary;
+  color: $color--white;
+  box-shadow: 0px 0px 10px 0px $color--white;
+}
+
+//To use, put the next Image component inside a div, and give this class to the div
+.gif_container {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 32px;
+  img {
+    margin: 0 auto;
+  }
 }
