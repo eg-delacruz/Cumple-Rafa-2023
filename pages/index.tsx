@@ -34,11 +34,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>La aventura del cuerpito de sapo</title>
-        <meta
-          name='description'
-          content='Búsqueda del tesoro del cuerpito de sapo'
-        />
+        <title>Una cuenta regresiva misteriosa</title>
+        <meta name='description' content='A la espera de un gran evento...' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
