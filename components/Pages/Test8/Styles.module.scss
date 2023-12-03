@@ -1,0 +1,8 @@
+@import '../../../styles/vars.scss';
+
+.list {
+  margin: 0 auto;
+  max-width: 400px;
+  list-style: none;
+  @include font-size(16px);
+}

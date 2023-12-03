@@ -3,7 +3,7 @@ import { useState } from 'react';
 const useRandomMessage = () => {
   const mensajes: { [key: number]: string } = {
     1: 'No amorcito, vuelva a probar',
-    2: 'Venga mejor, le vamos a dar un besito',
+    2: 'Venga, mejor, le vamos a dar un besito',
     3: 'No, no, no, no, no, no, no',
     4: 'Ay no...',
     5: 'No amor, no',

@@ -61,8 +61,8 @@ const Test5 = ({ setPage }: Props) => {
         <p>Atrás podía leerse:</p>
         <br />
         <p>
-          "A pesar de su nombre tan frío, aquel elixir era tan reconfortante por
-          su cálido aroma..."
+          &quot;A pesar de su nombre tan frío, aquel elixir era tan
+          reconfortante por su cálido aroma...&quot;
         </p>
         <br />
         <p>

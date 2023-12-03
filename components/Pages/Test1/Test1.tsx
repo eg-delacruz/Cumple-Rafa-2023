@@ -52,13 +52,13 @@ const Test1 = ({ setPage }: Props) => {
           visita. Acababa de bajarse de un tren desde Muy Muy Lejano, y estaba
           muy cansado.
         </p>
-        <div className='gif_container'>
-          <Image
-            src={principe_encantador}
-            alt='Príncipe encantador'
-            width={320}
-          />
-        </div>
+        <br />
+        <Image
+          src={principe_encantador}
+          alt='Príncipe encantador'
+          layout='responsive'
+        />
+        <br />
         <br />
         <p>
           El príncipe encantador decidió descansar un momento en el cuarto de su

@@ -63,7 +63,7 @@ const Test4 = ({ setPage }: Props) => {
           parte trasera se podía leer lo siguiente:
         </p>
         <br />
-        <p>"¿En qué provincia española fue tomada esta foto?"</p>
+        <p>&quot;¿En qué provincia española fue tomada esta foto?&quot;</p>
         <br />
         <TestForm
           handleSubmit={handleSubmit}
@@ -99,7 +99,7 @@ const Test4 = ({ setPage }: Props) => {
           <br />
           <p>El pergamino decía lo siguiente:</p>
           <br />
-          <p>"Carta a Rafa"</p>
+          <p>&quot;Carta a Rafa&quot;</p>
           <br />
           <p>
             Luego de haberlo leído, el pequeño sapito echó un vistazo al

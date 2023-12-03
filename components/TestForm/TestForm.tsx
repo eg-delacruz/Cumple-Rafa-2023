@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { HTMLInputTypeAttribute } from 'react';
 
 //Styles
 import styles from './Styles.module.scss';
@@ -14,6 +14,8 @@ type Props = {
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
   randomErrorMessage: string;
   buttonMessage?: string;
+  inputType?: HTMLInputTypeAttribute | undefined;
+  title?: string;
 };
 
 const TestForm = ({
@@ -22,8 +24,10 @@ const TestForm = ({
   inputChange,
   handleSubmit,
   randomErrorMessage,
-  buttonMessage = 'Siguiente',
-}: Props) => {
+  buttonMessage = 'Continuar',
+  inputType = 'text',
+  title = 'Respuesta:',
+}: Props & { inputType?: HTMLInputTypeAttribute }) => {
   return (
     <form
       className={styles.form}
@@ -32,15 +36,15 @@ const TestForm = ({
       autoComplete='off'
       onSubmit={handleSubmit}
     >
-      <h4>Respuesta: </h4>
+      <h4>{title} </h4>
       <br />
       <input
-        type='text'
         id='answer'
         autoCapitalize='off'
         required
         value={inputValue}
         onChange={inputChange}
+        type={inputType}
       />
       <br />
       <br />

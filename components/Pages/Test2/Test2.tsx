@@ -73,8 +73,10 @@ const Test2 = ({ setPage }: Props) => {
         <br />
 
         <p className={styles.question}>
-          "¿Cuál era el nombre correcto de este manjar?" - se preguntó el sapito
+          &quot;¿Cuál era el nombre correcto de este manjar?&quot; - se preguntó
+          el sapito
         </p>
+        <br />
 
         <TestForm
           theme='gryffindor'

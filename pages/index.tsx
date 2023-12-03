@@ -17,12 +17,17 @@ import Test6 from '@components/Pages/Test6/Test6';
 import Test7 from '@components/Pages/Test7/Test7';
 import Test8 from '@components/Pages/Test8/Test8';
 import Test9 from '@components/Pages/Test9/Test9';
+import Test10 from '@components/Pages/Test10/Test10';
+import Test11 from '@components/Pages/Test11/Test11';
+import Despedida from '@components/Pages/Despedida/Despedida';
 
+//TODO: Añadir carta Rafa
 export default function Home() {
-  //TODO: Uncomment this and erase the use state
-  // const [page, setPage] = useLocalStorage('page', 0);
-  const [page, setPage] = useState(0);
-  console.log({ page });
+  //Use this hook for production instead of the setPage below
+  const [page, setPage] = useLocalStorage('page', 0);
+
+  //Use this state instead of the useLocalStorage for development, since the useLocalStorage throws an error in the browser because of server side processing
+  //const [page, setPage] = useState(5);
 
   return (
     <>
@@ -50,6 +55,12 @@ export default function Home() {
       {page === 6 && <Test4 setPage={setPage} />}
       {page === 7 && <Test5 setPage={setPage} />}
       {page === 8 && <Test6 setPage={setPage} />}
+      {page === 9 && <Test7 setPage={setPage} />}
+      {page === 10 && <Test8 setPage={setPage} />}
+      {page === 11 && <Test9 setPage={setPage} />}
+      {page === 12 && <Test10 setPage={setPage} />}
+      {page === 13 && <Test11 setPage={setPage} />}
+      {page === 14 && <Despedida setPage={setPage} />}
     </>
   );
 }

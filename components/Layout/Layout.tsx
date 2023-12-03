@@ -10,9 +10,14 @@ import sapo from '@assets/gifs/sapo.gif';
 type Props = {
   children: React.ReactNode;
   theme?: 'gryffindor' | 'slytherin' | 'hufflepuff' | 'ravenclaw';
+  main_width?: 1000 | 700;
 };
 
-const Layout = ({ theme = 'gryffindor', children }: Props) => {
+const Layout = ({
+  theme = 'gryffindor',
+  main_width = 700,
+  children,
+}: Props) => {
   return (
     <div
       className={`${styles.pagebg} 
@@ -33,7 +38,13 @@ const Layout = ({ theme = 'gryffindor', children }: Props) => {
           <Image src={sapo} alt='sapo' width={100} height={100} />
         </div>
       </header>
-      <main className={`${styles.main} container`}>{children}</main>
+      <main
+        className={`${styles.main} ${
+          main_width === 1000 ? styles.main_1000_width : null
+        } container`}
+      >
+        {children}
+      </main>
     </div>
   );
 };

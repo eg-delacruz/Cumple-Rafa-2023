@@ -8,7 +8,6 @@ import styles from './Styles.module.scss';
 //Components
 import Layout from '@components/Layout/Layout';
 import TestForm from '@components/TestForm/TestForm';
-import CorrectAnswer from '@components/CorrectAnswer/CorrectAnswer';
 
 //Hooks
 import { useInputValue } from '@hooks/useInputValue';
@@ -16,6 +15,7 @@ import useRandomMessage from '@hooks/useRandomMessage';
 
 //Assets
 import Voldemort from '@assets/gifs/voldemort.gif';
+import hogwarts from '@assets/gifs/hogwarts.gif';
 
 //Types
 type Props = {
@@ -52,10 +52,11 @@ const Test3 = ({ setPage }: Props) => {
         <br />
         <p>Repentinamente, al sapito se le presentó el siguiente acertijo:</p>
         <br />
-        <p>"4 patas tiene y no puede andar.</p>
+        <p>&quot;4 patas tiene y no puede andar.</p>
         <p>También cabecera sin saber hablar.</p>
         <p>
-          El castillo que en ella se esconde, la siguiente pista te dará..."
+          El castillo que en ella se esconde, la siguiente pista te
+          dará...&quot;
         </p>
         <br />
         <p>
@@ -86,6 +87,11 @@ const Test3 = ({ setPage }: Props) => {
           habilidades como mago.
         </p>
         <br />
+
+        <Image src={hogwarts} alt='Hogwarts' layout='responsive' />
+
+        <br />
+        <br />
         <p>
           Repentinamente, el príncipe y el sapito fueron absorbidos dentro de
           aquel castillo en miniatura...
@@ -99,13 +105,15 @@ const Test3 = ({ setPage }: Props) => {
           Al adentrarse en el castillo, el sapito al mismísimo Voldemort se
           encontró, y las siguientes palabras este pronunció:
         </p>
-        <div className={`${styles.appear1} gif_container`}>
-          <Image src={Voldemort} alt='Voldemort' width={320} />
+        <br />
+        <div className={styles.appear1}>
+          <Image src={Voldemort} alt='Voldemort' layout='responsive' />
         </div>
+
         <br />
         <p className={styles.appear2}>
-          "Para vencerme, las <strong>3 Reliquias de Ourense</strong> encontrar
-          deberás..."
+          &quot;Para vencerme, las <strong>3 Reliquias de Ourense</strong>{' '}
+          encontrar deberás...&quot;
         </p>
 
         <br />

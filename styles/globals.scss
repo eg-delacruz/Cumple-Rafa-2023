@@ -46,7 +46,9 @@ h5 {
 h6 {
   @include font-size(16px);
 }
-p {
+p,
+ul,
+li {
   font-family: $font2;
   @include font-size(16px);
 }
@@ -111,4 +113,11 @@ a {
   img {
     margin: 0 auto;
   }
+}
+
+//Use with the next Image component with layout="responsive"
+.img_container {
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 5px;
 }

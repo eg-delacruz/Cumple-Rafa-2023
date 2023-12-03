@@ -27,10 +27,8 @@ const Welcome = ({ setPage }: Props) => {
         Esta es la historia de un sapito muy bonito y especial. Se dice que un
         día, este recibió una misteriosa cuenta regresiva...
       </p>
-
-      <div className='gif_container'>
-        <Image src={busqueda_tesoro} alt='busqueda_tesoro' width={320} />
-      </div>
+      <br />
+      <Image src={busqueda_tesoro} alt='busqueda_tesoro' layout='responsive' />
 
       <p className={styles.text_p2}>
         ...Poco sabía él lo que el futuro le deparaba cuando esta a su fin

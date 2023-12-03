@@ -6,7 +6,7 @@ type Props = {
   setNextPage: () => void;
   theme: string;
   title?: string;
-  buttonMessage: string;
+  buttonMessage?: string;
   children?: React.ReactNode;
   align?: 'center' | 'left';
 };
@@ -15,7 +15,7 @@ const CorrectAnswer = ({
   setNextPage,
   theme,
   title = '¡Correcto!',
-  buttonMessage = 'Siguiente',
+  buttonMessage = 'Continuar',
   align = 'center',
   children,
 }: Props): JSX.Element => {
