@@ -26,7 +26,7 @@ import Despedida from '@components/Pages/Despedida/Despedida';
 
 export default function Home() {
   //Use this hook for production instead of the setPage below
-  const [page, setPage] = useLocalStorage('page', 14);
+  const [page, setPage] = useLocalStorage('page', 0);
 
   //Use this state instead of the useLocalStorage for development, since the useLocalStorage throws an error in the browser because of server side processing
   //const [page, setPage] = useState(0);
