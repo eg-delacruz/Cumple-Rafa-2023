@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-//Styles
-import styles from './Styles.module.scss';
-
 //Assets
 import voldemor_vs_harry from '@assets/gifs/voldemort_vs_harry.gif';
 import kiss from '@assets/gifs/kiss.gif';
@@ -20,13 +17,17 @@ const Despedida = ({ setPage }: Props) => {
   const THEME = 'slytherin';
   const [answered, setAnswered] = useState(false);
 
+  const resetGame = () => {
+    setPage(0);
+  };
+
   const unAnseredContent = () => {
     return (
       <>
         <h2>El desenlace</h2>
         <br />
         <p>
-          Todo el mundo sabe que la forma más eficaz de oner fin a la maldad es
+          Todo el mundo sabe que la forma más eficaz de poner fin a la maldad es
           a través del amor y de la amistad.
         </p>
         <br />
@@ -55,7 +56,7 @@ const Despedida = ({ setPage }: Props) => {
   const answeredContent = () => {
     return (
       <>
-        <p>Al haber pegado la foto en la pared, el enemigo fue vencido.</p>
+        <p>Al haber pegado la foto en la pared, el enemigo vencido fue.</p>
         <br />
         <p>
           El príncipe encantador - &quot;Pequeño Sapito, espero que hayas
@@ -70,6 +71,10 @@ const Despedida = ({ setPage }: Props) => {
         <br />
         <p>Con cariño,</p>
         <p>Gerardo</p>
+        <br />
+        <button onClick={resetGame} className={`btn btn__${THEME}`}>
+          Reiniciar la aventura
+        </button>
       </>
     );
   };

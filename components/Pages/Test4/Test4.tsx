@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 //Styles
@@ -26,6 +26,13 @@ const Test4 = ({ setPage }: Props) => {
   const [answered, setAnswered] = useState(false);
   const ANSWER = useInputValue('');
   const { random, setRandomMessage } = useRandomMessage();
+
+  //Scroll to top when loading the component
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0);
+    }
+  }, []);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

@@ -62,8 +62,8 @@ const Test10 = ({ setPage }: Props) => {
         <br />
         <br />
         <p>
-          Menos mal su amigo, 626, se había dado a la tarea de buscar el código
-          secreto.
+          Menos mal que su amigo, 626, se había dado a la tarea de buscar el
+          código secreto.
         </p>
         <br />
         <TestForm
@@ -92,7 +92,7 @@ const Test10 = ({ setPage }: Props) => {
           <p>
             Tal parece que dentro del cofre se encuentan indicaciones precisas
             del paradero actual de Voldemort, así como de un arma muy poderosa
-            que podrá usar para ponerle fin de una vez por todas
+            que podrá usarse para darle fin de una vez por todas
           </p>
           <br />
 

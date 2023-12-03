@@ -22,12 +22,14 @@ import Test11 from '@components/Pages/Test11/Test11';
 import Despedida from '@components/Pages/Despedida/Despedida';
 
 //TODO: Añadir carta Rafa
+//TODO: Añadir nombre del té
+
 export default function Home() {
   //Use this hook for production instead of the setPage below
-  const [page, setPage] = useLocalStorage('page', 0);
+  const [page, setPage] = useLocalStorage('page', 14);
 
   //Use this state instead of the useLocalStorage for development, since the useLocalStorage throws an error in the browser because of server side processing
-  //const [page, setPage] = useState(5);
+  //const [page, setPage] = useState(0);
 
   return (
     <>
@@ -42,8 +44,8 @@ export default function Home() {
       </Head>
 
       {/* {page === 0 && (
-          <Timer date='December 27 2023 10:45:00' setPage={setPage} />
-        )} */}
+        <Timer date='December 27 2023 10:45:00' setPage={setPage} />
+      )} */}
       {page === 0 && (
         <Timer date='November 30 2023 11:34:00' setPage={setPage} />
       )}
