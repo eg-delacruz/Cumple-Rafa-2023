@@ -169,7 +169,7 @@ const Test9 = ({ setPage }: Props) => {
             />
           </div>
           <br />
-          <button className={`btn btn__${THEME}`}>¿Quén será?</button>
+          <button className={`btn btn__${THEME}`}>¿Quién será?</button>
           <br />
           <p>{random}</p>
         </form>

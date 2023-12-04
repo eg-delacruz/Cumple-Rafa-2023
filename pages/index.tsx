@@ -22,7 +22,6 @@ import Test11 from '@components/Pages/Test11/Test11';
 import Despedida from '@components/Pages/Despedida/Despedida';
 
 //TODO: Añadir carta Rafa
-//TODO: Añadir nombre del té
 
 export default function Home() {
   //Use this hook for production instead of the setPage below
@@ -40,11 +39,8 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      {/* {page === 0 && (
-        <Timer date='December 27 2023 10:45:00' setPage={setPage} />
-      )} */}
       {page === 0 && (
-        <Timer date='November 30 2023 11:34:00' setPage={setPage} />
+        <Timer date='December 27 2023 10:45:00' setPage={setPage} />
       )}
       {page === 1 && <Joke setPage={setPage} />}
       {page === 2 && <Welcome setPage={setPage} />}

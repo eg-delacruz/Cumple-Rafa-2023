@@ -32,7 +32,7 @@ const Test5 = ({ setPage }: Props) => {
     if (typeof ANSWER.value === 'string') {
       const LOWERCASE_ANSWER = ANSWER.value.toLowerCase();
 
-      if (LOWERCASE_ANSWER === 'nombre_te') {
+      if (LOWERCASE_ANSWER === 'tropical supreme') {
         setAnswered(true);
       } else {
         setRandomMessage();
