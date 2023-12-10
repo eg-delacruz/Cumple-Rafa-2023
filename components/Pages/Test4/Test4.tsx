@@ -106,7 +106,108 @@ const Test4 = ({ setPage }: Props) => {
           <br />
           <p>El pergamino decía lo siguiente:</p>
           <br />
-          <p>&quot;Carta a Rafa&quot;</p>
+          {/* Carta */}
+          <div className={styles.parchment}>
+            <p>Querido Rafa,</p>
+            <br />
+            <p>
+              A casi dos años desde el día en que nos conocimos, hoy me pongo a
+              ver atrás y revivir las vivencias que vos y yo hemos compartido.{' '}
+            </p>
+            <br />
+            <p>
+              Me doy cuenta de que hemos pasado por muchas cosas. Muchas etapas,
+              cada una con sus cosas alegres, sus cosas bonitas, sus cosas
+              duras, y sus cosas tristes.
+            </p>
+            <br />
+            <br />
+            <p>Estos dos años me han dejado observar grandes cambios en vos.</p>
+            <p>
+              Recuerdo esos primeros días y semanas en que te conocí. Hablabas
+              poco y tu timidez era evidente. Supongo que era inevitable, dadas
+              las duras situaciones que te tocó vivir. He sido testigo de todas
+              las circunstancias por las que te ha tocado pasar en España.
+              Incertidumbres, miedos, decepciones y algunas tragedias.{' '}
+            </p>
+            <br />
+            <p>
+              A pesar de todo eso y entre tantas preocupaciones, esa sonrisa
+              tuya siempre se asoma en tu carita. A pesar de todo eso, siempre
+              me has regalado momentos muy bonitos, llenos de alegría, cariño y
+              ternura. A pesar de todo eso, lo lograste. A pesar de todo eso,
+              has llegado hasta donde estás hoy, y es algo que siempre voy a
+              admirar mucho de vos y que me servirá de inspiración para
+              continuar con mi propio camino. No digo que todo sea perfecto
+              ahora en tu vida. Siempre habrá algún problema o situación
+              incómoda, pero la tendencia es clara y estoy emocionado por
+              presenciar todas esas cosas buenas que la vida te tiene preparadas
+              para el futuro.
+            </p>
+            <br />
+            <br />
+            <p>
+              Haberte conocido fue para mí algo muy especial. Toda esta aventura
+              con vos me ha hecho descubrir nuevas cosas y me ha permitido vivir
+              experiencias que no conocía. Me alegra mucho que ahora nos hagamos
+              llamar &quot;novios&quot;, pues estar con un chico era algo nuevo
+              para mí, y me hace muy feliz haber podido vivir esta experiencia
+              con vos.
+            </p>
+            <br />
+            <p>
+              Poco a poco he ido perdiendo ese temor del &quot;qué dirán&quot;
+              por agarrarnos de las manos o por darnos un beso mientras
+              caminamos por la calle. Cada vez me es más fácil referirme a vos
+              como mi pareja ante otras personas sin temor a lo que puedan
+              pensar. Sé que aún me falta mejorar en este aspecto, pero cada día
+              lo hago un poco mejor.
+            </p>
+            <br />
+            <p>
+              He aprendido muchas cosas de vos. Me has enseñado lo que realmente
+              es la perseverancia. Me has demostrado tu forma de ser resiliente.
+              He podido ser testigo de cómo, a pesar de las circunstancias y los
+              golpes duros, aún es posible continuar, ser feliz y sonreír, y
+              esto es algo que puedo y quiero implementar en mi vida.
+            </p>
+            <br />
+            <br />
+            <p>
+              No solo vos te has superado como persona o yo he aprendido cosas
+              nuevas. Nuestra relación también ha ido evolucionando. Ambos
+              sabemos que muchas situaciones de convivencia no han sido fáciles.
+              Sin embargo, soy consciente de que las cosas van cada vez mejor,
+              gracias a las conversaciones que hemos tenido al respecto. Esto me
+              hace muy feliz y me da mucha tranquilidad. Me siento agradecido y
+              feliz por tener a alguien tan especial como vos a mi lado, y
+              espero que podamos seguir construyendo momentos bonitos en el
+              futuro.
+            </p>
+            <br />
+            <br />
+            <p>
+              Tristemente, no pudimos pasar navidad juntos, pero el día de hoy,
+              tu cumpleaños, estamos juntos, cosa que me alegra mucho.
+            </p>
+            <br />
+            <p>
+              Espero que este día la pasés muy bien, y que los sucesos que en él
+              se presenten dejen entre ver, al menos, una sonrisita en tu
+              rostro.{' '}
+            </p>
+            <br />
+            <p>
+              Feliz cumpleaños, amor. Te deseo todo lo mejor en este nuevo año
+              de vida y que se cumplan todos tus deseos y tus metas. ¡Te quiero
+              mucho!
+            </p>
+            <br />
+            <p>Con cariño,</p>
+            <p>Gerardo</p>
+          </div>
+          {/* Fin carta */}
+          <br />
           <br />
           <p>
             Luego de haberlo leído, el pequeño sapito echó un vistazo al

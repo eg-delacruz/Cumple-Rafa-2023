@@ -21,8 +21,6 @@ import Test10 from '@components/Pages/Test10/Test10';
 import Test11 from '@components/Pages/Test11/Test11';
 import Despedida from '@components/Pages/Despedida/Despedida';
 
-//TODO: Añadir carta Rafa
-
 export default function Home() {
   //Use this hook for production instead of the setPage below
   const [page, setPage] = useLocalStorage('page', 0);

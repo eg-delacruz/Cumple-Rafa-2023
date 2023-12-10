@@ -1,3 +1,22 @@
+@import '../../../styles/vars.scss';
+
+.parchment {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  margin: 0 auto;
+  color: $color--black;
+  box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
+  p {
+    font-family: $font3;
+    @include font-size(26px);
+  }
+}
+
 .img_container {
   max-width: 400px;
   margin: 0 auto;
